@@ -1,0 +1,20 @@
+#N canvas 3 86 986 531 10;
+#X text 13 122 1 - L'utilisateur doit pouvoir choisir un nouveau son
+sur le disque à l'aide d'un simple clic. Le système doit s'ajuster
+à la longueur du nouveau son automatiquement.;
+#X text 13 186 2 - Un toggle doit permettre d'activiter/désactiver
+le processus.;
+#X text 11 316 4 - Ajouter un contrôle de volume avant l'envoi aux
+sorties audio.;
+#X text 9 34 À l'aide d'un son monophonique chargé dans un array
+\, vous devez créer un système de lecture en boucle avec contrôle
+sur la durée de la boucle. Pour la lecture des échantillons dans
+l'array \, vous devez utiliser (et étudier!) l'objet tabplay~. Voici
+les éléments à considérer:;
+#X text 13 226 3 - Un potentiomètre d'ambitus 0 à 1 doit être présent
+afin de contrôler dynamiquement la durée de lecture du son (le point
+de départ est toujours le début du son) avant le déclenchement suivant.
+La lecture ne doit pas recommencer chaque fois que le potentiomètre
+bouge. La durée se met à jour seulement lorsque la boucle courante
+est terminée.;
+#X text 12 10 MUS 3324X/6324X - Devoir numéro 1;

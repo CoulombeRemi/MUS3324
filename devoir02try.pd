@@ -1,0 +1,46 @@
+#N canvas 294 50 969 683 12;
+#X obj 197 395 noteout;
+#X floatatom 273 102 5 0 0 0 - - -;
+#X obj 197 318 funbuff;
+#C restore;
+#X floatatom 197 342 5 0 0 0 - - -;
+#X obj 197 368 makenote 120 125;
+#X obj 273 42 metro 250;
+#X text 573 69 gamme maj.;
+#X obj 273 13 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 572 121 gamme min.;
+#X obj 489 34 30sDelay~;
+#X obj 288 159 t f f;
+#X floatatom 289 185 5 0 0 0 - - -;
+#X obj 196 160 t f f;
+#X obj 228 204 sel 0 4;
+#X msg 228 231 127;
+#X msg 274 230 60;
+#X text 486 16 changeur de gamme;
+#X msg 573 92 0 60 \, 1 62 \, 2 64 \, 3 65 \, 4 67 \, 5 69 \, 6 71
+;
+#X msg 573 148 0 60 \, 1 62 \, 2 63 \, 3 65 \, 4 67 \, 5 68 \, 6 70
+;
+#X obj 271 72 random 6;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 1 0 1;
+#X connect 5 0 19 0;
+#X connect 7 0 5 0;
+#X connect 9 0 17 0;
+#X connect 9 1 18 0;
+#X connect 10 0 11 0;
+#X connect 10 0 12 0;
+#X connect 12 0 2 0;
+#X connect 12 1 13 0;
+#X connect 13 0 14 0;
+#X connect 13 1 14 0;
+#X connect 13 2 15 0;
+#X connect 14 0 4 1;
+#X connect 15 0 4 1;
+#X connect 17 0 2 0;
+#X connect 18 0 2 0;
+#X connect 19 0 1 0;

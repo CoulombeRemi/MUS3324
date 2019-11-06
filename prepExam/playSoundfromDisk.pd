@@ -1,0 +1,29 @@
+#N canvas 630 140 665 545 12;
+#X msg 262 145 open ../snds/allo.aif;
+#X obj 262 242 readsf~ 2;
+#X msg 279 170 1;
+#X msg 280 197 0;
+#X text 312 171 start;
+#X text 314 197 stop;
+#X obj 261 317 *~;
+#X obj 296 317 *~;
+#X obj 263 346 dac~;
+#X obj 404 285 line~;
+#X obj 322 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 404 257 \$1 25;
+#X obj 407 233 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 342 264 stop;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 1 7 0;
+#X connect 1 2 10 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 1;
+#X connect 9 0 7 1;
+#X connect 9 0 6 1;
+#X connect 11 0 9 0;
+#X connect 12 0 11 0;

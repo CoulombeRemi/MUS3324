@@ -1,0 +1,64 @@
+#N canvas 379 67 914 393 10;
+#X obj 67 254 readsf~;
+#X msg 107 203 1;
+#X msg 107 225 0;
+#X obj 57 335 dac~;
+#X obj 113 279 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 67 80 open /home/olivier/Dropbox/private/snds/flute.aif;
+#X msg 86 125 open ../snds/flute.aif;
+#X obj 67 306 *~;
+#X obj 323 246 hsl 128 15 0 1 0 0 empty empty Gain -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 320 266 \$1 25;
+#X obj 320 288 line~;
+#X msg 619 142 1;
+#X msg 619 164 0;
+#X obj 590 264 dac~;
+#X obj 650 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 590 239 *~;
+#X obj 709 168 hsl 128 15 0 1 0 0 empty empty Gain -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 706 188 \$1 25;
+#X obj 706 210 line~;
+#X obj 590 187 readsf~ 2;
+#X obj 621 240 *~;
+#X msg 590 119 open ../snds/cacanne4.aif;
+#X msg 98 169 open ../snds/flute.aif 44100;
+#X text 141 203 start;
+#X text 142 226 stop;
+#X text 62 62 Chemin complet à partir de la racine de l'ordinateur
+;
+#X text 80 107 Chemin relatif à partir l'emplacement de la patch;
+#X text 94 151 Temps de départ dans le fichier son \, en échantillons
+;
+#X text 130 279 signal de fin de lecture;
+#X text 8 8 Lecture de fichier son sur le disque dur;
+#X text 649 142 start;
+#X text 650 165 stop;
+#X text 667 208 end;
+#X connect 0 0 7 0;
+#X connect 0 1 4 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 3 0;
+#X connect 7 0 3 1;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 7 1;
+#X connect 11 0 19 0;
+#X connect 12 0 19 0;
+#X connect 15 0 13 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 15 1;
+#X connect 18 0 20 1;
+#X connect 19 0 15 0;
+#X connect 19 1 20 0;
+#X connect 19 2 14 0;
+#X connect 20 0 13 1;
+#X connect 21 0 19 0;
+#X connect 22 0 0 0;

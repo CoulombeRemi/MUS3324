@@ -1,0 +1,4 @@
+#N canvas 498 177 450 300 12;
+#X obj 71 178 phasor~;
+#X msg 71 92 100;
+#X connect 1 0 0 0;

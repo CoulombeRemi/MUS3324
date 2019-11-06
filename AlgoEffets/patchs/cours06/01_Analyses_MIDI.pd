@@ -1,0 +1,97 @@
+#N canvas 260 122 1029 531 10;
+#X obj 26 61 notein;
+#X obj 26 86 stripnote;
+#X obj 26 113 thresh 100;
+#X obj 26 140 t l b;
+#X obj 26 167 iter;
+#X obj 26 194 counter 1 32;
+#X obj 26 221 > 2;
+#X obj 26 244 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 104 107 collecte les notes jouées dans un intervalle de 100
+ms et envoie une liste.;
+#X text 70 141 Remet le compteur au point de départ et envoie la liste.
+;
+#X text 98 86 ne laisse passer que les notes on.;
+#X text 70 168 iter envoie les éléments d'une liste un à la fois.
+;
+#X text 119 195 compte le nombre d'éléments dans la liste.;
+#X text 55 222 Si trois notes ou plus \, envoie 1 \, sinon 0;
+#X text 5 7 Analyses sur le jeu au clavier MIDI.;
+#X text 24 35 Détection d'accords.;
+#X obj 565 64 notein;
+#X obj 584 87 sel 0;
+#X obj 584 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 616 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 585 142 timer;
+#X floatatom 585 164 5 0 0 0 - - -;
+#X obj 585 189 > 500;
+#X obj 585 212 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 638 99 Les notes on bang l'entrée de gauche.;
+#X text 638 115 Les notes off bang l'entrée de droite.;
+#X text 630 137 Calcul le temps écoulé entre un bang à;
+#X text 630 152 gauche et un bang à droite. L'entrée de;
+#X text 630 167 droite génère une sortie.;
+#X text 631 190 Comparaison avec un seuil temporel...;
+#X text 561 38 Détection de la durée d'une note.;
+#X obj 364 342 notein;
+#X obj 364 417 noteout;
+#N canvas 561 133 452 367 transpositeur 0;
+#X obj 99 77 inlet pitch;
+#X obj 192 77 inlet velocity;
+#X obj 237 116 inlet transpo;
+#X obj 99 187 funbuff;
+#C restore;
+#X obj 130 115 gate;
+#X obj 162 159 + 0;
+#X obj 99 217 outlet pitch;
+#X obj 192 217 outlet velocity;
+#X obj 130 137 t f f;
+#X connect 0 0 4 1;
+#X connect 0 0 3 0;
+#X connect 1 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 1;
+#X connect 3 0 6 0;
+#X connect 4 0 8 0;
+#X connect 5 0 3 1;
+#X connect 8 0 3 0;
+#X connect 8 1 5 0;
+#X restore 364 369 pd transpositeur;
+#X text 297 286 Le transpositeur intelligent (prévient les notes collées)
+;
+#X obj 476 308 hsl 128 15 -24 24 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 6300 1;
+#X floatatom 473 349 5 0 0 0 - - -;
+#X floatatom 473 390 5 0 0 0 - - -;
+#X floatatom 364 393 5 0 0 0 - - -;
+#X obj 473 328 int;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 2;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 16 1 17 0;
+#X connect 17 0 18 0;
+#X connect 17 1 19 0;
+#X connect 18 0 20 1;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 31 0 33 0;
+#X connect 31 1 33 1;
+#X connect 33 0 38 0;
+#X connect 33 1 37 0;
+#X connect 35 0 39 0;
+#X connect 36 0 33 2;
+#X connect 37 0 32 1;
+#X connect 38 0 32 0;
+#X connect 39 0 36 0;

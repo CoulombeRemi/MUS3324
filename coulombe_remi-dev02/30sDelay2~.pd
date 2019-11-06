@@ -1,0 +1,21 @@
+#N canvas 357 77 450 507 12;
+#X obj 89 30 loadbang;
+#X obj 80 191 sel 0 1;
+#X floatatom 172 73 5 0 0 0 - - -;
+#X obj 84 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 68 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 197 343 outlet min;
+#X obj 94 340 outlet maj;
+#X obj 92 97 delay 30000;
+#X obj 48 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 6 0;
+#X connect 1 1 5 0;
+#X connect 2 0 7 1;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 7 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;

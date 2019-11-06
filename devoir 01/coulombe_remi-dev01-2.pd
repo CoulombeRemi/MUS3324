@@ -1,0 +1,69 @@
+#N canvas 177 123 1247 656 12;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 176819 float 2;
+#X coords 0 1 176819 -1 400 280 1 0 0;
+#X restore 706 341 graph;
+#X msg 183 144 read -resize \$1 array1;
+#X obj 183 167 soundfiler;
+#X obj 183 120 openpanel;
+#X obj 183 86 bng 30 250 50 0 empty empty empty 30 30 0 10 -258113
+-1 -1;
+#X obj 506 269 tabplay~ array1;
+#X obj 511 324 dac~;
+#X obj 505 298 *~;
+#X obj 537 298 *~;
+#X obj 595 337 line~;
+#X obj 455 71 tgl 30 0 empty empty empty 17 7 0 30 -4034 -258113 -1
+0 1;
+#X obj 619 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 544 161 *;
+#X obj 548 143 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
+-258113 -1 700 1;
+#X floatatom 182 203 5 0 0 0 - - -;
+#X floatatom 182 228 5 0 0 0 - - -;
+#X floatatom 182 251 5 0 0 0 - - -;
+#X msg 593 312 \$1 50;
+#X text 451 55 Start;
+#X text 178 66 load;
+#X text 224 203 nbr d'échantillons;
+#X text 225 228 nbr d'échantillons choisi;
+#X text 225 252 nbr d'échantillons total;
+#X msg 501 234 stop;
+#X obj 455 116 sel 0 1;
+#X msg 544 235 0 \$1;
+#X obj 490 142 t b b;
+#X obj 544 184 + 1;
+#X obj 544 210 int;
+#X text 574 211 donne 0 en entrer en premier et la valuer du slider
+après;
+#X obj 684 340 vsl 15 280 0 25 0 0 empty empty empty 0 -9 0 10 -258113
+-4032 -4032 2400 1;
+#X connect 1 0 2 0;
+#X connect 2 0 14 0;
+#X connect 2 0 12 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 5 1 11 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 9 0 7 1;
+#X connect 9 0 8 1;
+#X connect 10 0 24 0;
+#X connect 11 0 26 0;
+#X connect 12 0 16 0;
+#X connect 12 0 27 0;
+#X connect 13 0 15 0;
+#X connect 13 0 12 0;
+#X connect 17 0 9 0;
+#X connect 23 0 5 0;
+#X connect 24 0 23 0;
+#X connect 24 1 26 0;
+#X connect 25 0 5 0;
+#X connect 26 0 28 0;
+#X connect 26 1 13 0;
+#X connect 27 0 28 1;
+#X connect 28 0 25 0;
+#X connect 30 0 17 0;

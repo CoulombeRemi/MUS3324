@@ -1,0 +1,60 @@
+#N canvas 777 154 339 230 10;
+#N canvas 74 75 930 403 metro 0;
+#X obj 345 59 inlet contrôles;
+#X obj 345 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 396 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 345 93 route bang stop;
+#X obj 447 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 470 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 447 157 sel 1 0;
+#X obj 470 281 delay 125;
+#X obj 530 217 inlet vitesse;
+#X msg 470 236 stop;
+#X obj 447 260 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 447 317 outlet bangs;
+#X text 459 89 Objet "route" pour la gestion des symboles.;
+#X text 455 113 Ce qui ne correspond pas à un des arguments (0 ou
+1 dans ce cas-ci) sort tel quel par la sortie de droite.;
+#X text 503 158 Object "sel" pour la gestion des chiffres.;
+#X text 546 281 Vitesse par défaut = 125 ms;
+#X text 25 260 Le "bang" en sortie réactive l'objet "delay" pour créer
+une suite de "bangs" à intervalle régulier.;
+#X text 336 41 Arrivé des contrôles;
+#X text 425 336 Sortie pour les bangs du métronome;
+#X connect 0 0 3 0;
+#X connect 1 0 10 0;
+#X connect 2 0 9 0;
+#X connect 3 0 1 0;
+#X connect 3 1 2 0;
+#X connect 3 2 6 0;
+#X connect 4 0 10 0;
+#X connect 5 0 9 0;
+#X connect 6 0 4 0;
+#X connect 6 1 5 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 10 0 11 0;
+#X restore 87 133 pd metro;
+#X obj 87 159 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 65 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 87 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 109 61 stop;
+#X floatatom 140 114 5 0 0 0 - - -;
+#X text 48 42 -- contrôles --;
+#X text 130 97 vitesse en ms;
+#X text 7 6 Construction d'un métronome maison.;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 1;

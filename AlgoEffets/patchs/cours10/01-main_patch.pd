@@ -1,0 +1,6 @@
+#N canvas 412 165 590 252 10;
+#X text 14 8 Plusieurs objets "sequenceur" indépendants.;
+#X obj 18 38 sequenceur;
+#X obj 18 125 sequenceur;
+#X obj 280 38 sequenceur;
+#X obj 280 125 sequenceur;

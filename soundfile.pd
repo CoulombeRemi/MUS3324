@@ -1,0 +1,28 @@
+#N canvas 824 62 450 300 12;
+#X obj 154 90 readsf~ 2;
+#X obj 155 235 dac~;
+#X obj 245 123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 17 9 open /soundfiles/vulfpeck.mp3;
+#X msg 247 55 1;
+#X msg 248 80 0;
+#X obj 335 28 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 9000 1;
+#X msg 335 164 \$1 25;
+#X obj 194 134 line~;
+#X obj 139 169 *~;
+#X obj 180 168 *~;
+#X msg 105 33 open /Users/remicoulombe/Desktop/MUS3324/soundfiles/Watermelon.mp3
+;
+#X connect 0 0 9 0;
+#X connect 0 1 10 0;
+#X connect 0 2 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 8 0 10 1;
+#X connect 9 0 1 0;
+#X connect 10 0 1 1;
+#X connect 11 0 0 0;

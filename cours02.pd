@@ -1,4 +1,4 @@
-#N canvas 795 109 590 450 12;
+#N canvas 919 103 425 450 12;
 #X obj 125 65 metro 150;
 #X obj 126 117 counter 0 6;
 #X floatatom 126 151 5 0 0 0 - - -;

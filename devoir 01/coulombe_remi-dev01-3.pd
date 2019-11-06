@@ -1,0 +1,77 @@
+#N canvas 29 50 807 656 12;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 176819 float 2;
+#X coords 0 1 176819 -1 200 140 1 0 0;
+#X restore 318 52 graph;
+#X obj 96 61 bng 30 250 50 0 empty empty empty 30 30 0 10 -258113 -1
+-1;
+#X obj 63 184 tabplay~ array1;
+#X obj 74 428 dac~;
+#X obj 68 402 *~;
+#X obj 100 402 *~;
+#X obj 117 372 line~;
+#X obj 222 55 tgl 30 0 empty empty empty 17 7 0 30 -4034 -258113 -1
+0 1;
+#X obj 207 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 184 298 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -258113
+-4032 -4032 400 1;
+#X msg 117 350 \$1 50;
+#X text 218 39 Start;
+#X text 92 39 load;
+#X msg 223 133 stop;
+#X obj 222 100 sel 0 1;
+#N canvas 768 138 713 585 sample 1;
+#X obj 52 51 inlet;
+#X msg 52 100 read -resize \$1 array1;
+#X obj 52 123 soundfiler;
+#X obj 52 76 openpanel;
+#X floatatom 78 155 5 0 0 0 - - -;
+#X floatatom 78 180 5 0 0 0 - - -;
+#X floatatom 78 203 5 0 0 0 - - -;
+#X text 118 156 nbr d'échantillons;
+#X text 119 181 nbr d'échantillons choisi;
+#X text 119 205 nbr d'échantillons total;
+#X obj 47 317 inlet;
+#X obj 107 381 *;
+#X obj 110 353 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
+-258113 -1 0 1;
+#X text 85 467 entre 0 et la valeur en échantillons;
+#X msg 45 467 0 \$1;
+#X obj 48 351 t b b;
+#X obj 106 409 + 1;
+#X obj 45 442 int;
+#X text 75 443 donne 0 en entrer en premier et la valuer du slider
+après;
+#X obj 96 317 inlet;
+#X obj 45 496 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 10 0 15 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 0;
+#X connect 14 0 20 0;
+#X connect 15 0 17 0;
+#X connect 15 1 12 0;
+#X connect 16 0 17 1;
+#X connect 17 0 14 0;
+#X connect 19 0 15 0;
+#X restore 64 148 pd sample ctrl;
+#X connect 1 0 15 1;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 2 1 8 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;
+#X connect 6 0 4 1;
+#X connect 6 0 5 1;
+#X connect 7 0 14 0;
+#X connect 8 0 15 2;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 13 0 2 0;
+#X connect 14 0 13 0;
+#X connect 14 1 15 1;
+#X connect 15 0 2 0;

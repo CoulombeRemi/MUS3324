@@ -1,0 +1,80 @@
+#N canvas 166 85 610 423 10;
+#X obj 72 322 *~;
+#X obj 72 344 dac~;
+#X obj 150 265 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3700 1;
+#X msg 147 283 \$1 50;
+#X obj 147 305 line~;
+#X text 2 5 Conversion en synth MIDI et gestion de la polyphonie.;
+#X obj 54 75 notein;
+#X obj 54 97 poly 5;
+#X obj 54 120 pack f f f;
+#X obj 54 142 route 1 2 3 4 5;
+#X obj 296 134 hsl 128 15 10 2000 0 1 empty empty empty -2 -8 0 10
+-262144 -1 -1 6400 0;
+#X floatatom 293 152 5 0 0 0 - - -;
+#X obj 296 193 hsl 128 15 0 200 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 6400 0;
+#X floatatom 293 211 5 0 0 0 - - -;
+#X obj 296 253 hsl 128 15 1 2000 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 26 0;
+#X floatatom 293 271 5 0 0 0 - - -;
+#X obj 296 310 hsl 128 15 1 2000 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 6400 0;
+#X floatatom 293 328 5 0 0 0 - - -;
+#X obj 296 78 hsl 128 15 0.001 2 1 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 11545 0;
+#X floatatom 293 96 5 0 0 0 - - -;
+#X obj 435 134 hsl 128 15 10 2000 0 1 empty empty empty -2 -8 0 10
+-262144 -1 -1 9600 0;
+#X floatatom 432 152 5 0 0 0 - - -;
+#X obj 435 193 hsl 128 15 0 200 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 1300 0;
+#X floatatom 432 211 5 0 0 0 - - -;
+#X obj 293 113 s \$0-spreader;
+#X obj 293 169 s \$0-amp_var_speed;
+#X obj 293 228 s \$0-amp_var_depth;
+#X obj 432 169 s \$0-freq_var_speed;
+#X obj 432 228 s \$0-freq_var_depth;
+#X obj 293 288 s \$0-fadein;
+#X obj 293 345 s \$0-fadeout;
+#X obj 135 164 synth_voice \$0;
+#X obj 135 183 synth_voice \$0;
+#X obj 135 202 synth_voice \$0;
+#X obj 135 221 synth_voice \$0;
+#X obj 135 240 synth_voice \$0;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 1;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 7 1 8 1;
+#X connect 7 2 8 2;
+#X connect 8 0 9 0;
+#X connect 9 0 35 0;
+#X connect 9 1 34 0;
+#X connect 9 2 33 0;
+#X connect 9 3 32 0;
+#X connect 9 4 31 0;
+#X connect 10 0 11 0;
+#X connect 11 0 25 0;
+#X connect 12 0 13 0;
+#X connect 13 0 26 0;
+#X connect 14 0 15 0;
+#X connect 15 0 29 0;
+#X connect 16 0 17 0;
+#X connect 17 0 30 0;
+#X connect 18 0 19 0;
+#X connect 19 0 24 0;
+#X connect 20 0 21 0;
+#X connect 21 0 27 0;
+#X connect 22 0 23 0;
+#X connect 23 0 28 0;
+#X connect 31 0 0 0;
+#X connect 32 0 0 0;
+#X connect 33 0 0 0;
+#X connect 34 0 0 0;
+#X connect 35 0 0 0;

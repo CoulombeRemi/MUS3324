@@ -1,0 +1,60 @@
+#N canvas 162 127 970 525 10;
+#X obj 24 77 expr if ($f1 < 50 \, $f1 \, 50);
+#X floatatom 24 57 5 0 0 0 - - -;
+#X floatatom 24 99 5 0 0 0 - - -;
+#X floatatom 230 57 5 0 0 0 - - -;
+#X floatatom 230 99 5 0 0 0 - - -;
+#X obj 230 77 expr if ($f1 >= 50 && $f1 < 100 \, $f1 \, 50);
+#X floatatom 531 57 5 0 0 0 - - -;
+#X floatatom 531 99 5 0 0 0 - - -;
+#X obj 531 77 expr if ($f1 < 50 \, $f1 \, $f1-50);
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array vals 12 float 3;
+#A 0 -0.828575 -0.742861 -0.628574 -0.485716 -0.242858 -0.128572 0.028572
+0.142858 0.371431 0.500003 0.600003 0.885719;
+#X coords 0 1 12 -1 200 140 1;
+#X restore 251 304 graph;
+#X floatatom 26 361 5 0 11 0 - - -;
+#X floatatom 26 403 5 0 0 0 - - -;
+#X obj 26 381 expr if ($s2[$f1] < 0 \, -1 \, 1);
+#X obj 148 329 loadbang;
+#X msg 148 351 symbol vals;
+#X text 21 268 Les conditions fonctionnent avec l'accès aux valeurs
+d'un array.;
+#X floatatom 24 165 5 0 0 0 - - -;
+#X floatatom 24 221 5 0 0 0 - - -;
+#X obj 24 185 expr if ($f1 > 0 \, $f1 \, abs($f1)) \; if ($f1 < 0 \,
+$f1 \, 0);
+#X floatatom 252 221 5 0 0 0 - - -;
+#X text 12 9 Les conditions.;
+#X text 22 142 multiples conditions séparées par un point-virgule.
+;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array view4 64 float 3;
+#A 0 0 0 0 0 0 0 0.054028 0.167244 0.278293 0.385724 0.48815 0.584248
+0.67276 0.752534 0.82255 0.881903 0.929784 0.96561 0.988916 0.999379
+0.996864 0.981426 0.953261 0.912698 0.860303 0.796753 0.722853 0.639569
+0.547993 0.449308 0.34478 0.235784 0.12373 0.0100675 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0397965 0.15318 0.264578
+;
+#X coords 0 1 63 -1 200 140 1;
+#X restore 725 307 graph;
+#X obj 525 285 osc~ 800;
+#X obj 525 307 expr~ if ($v1 < 0 \, 0 \, $v1);
+#X obj 525 329 tabsend~ view4;
+#X text 522 266 Élimine la partie négative du signal;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 5 0;
+#X connect 5 0 4 0;
+#X connect 6 0 8 0;
+#X connect 8 0 7 0;
+#X connect 10 0 12 0;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 1;
+#X connect 16 0 18 0;
+#X connect 18 0 17 0;
+#X connect 18 1 19 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;

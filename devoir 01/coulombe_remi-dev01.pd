@@ -1,0 +1,73 @@
+#N canvas 910 152 501 656 12;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array1 176819 float 2;
+#X coords 0 1 176819 -1 200 140 1 0 0;
+#X restore 245 323 graph;
+#X msg 282 109 read -resize \$1 array1;
+#X obj 282 132 soundfiler;
+#X obj 282 85 openpanel;
+#X obj 79 48 bng 30 250 50 0 empty empty empty 30 30 0 10 -258113 -1
+-1;
+#X obj 28 320 tabplay~ array1;
+#X obj 32 486 dac~;
+#X obj 26 460 *~;
+#X obj 58 460 *~;
+#X obj 103 420 line~;
+#X obj 27 46 tgl 30 0 empty empty empty 17 7 0 30 -4034 -258113 -1
+0 1;
+#X obj 127 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 105 504 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -258113
+-4032 -4032 1300 1;
+#X obj 120 199 *;
+#X obj 113 472 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -4032
+-258113 -1 12700 1;
+#X floatatom 257 179 5 0 0 0 - - -;
+#X floatatom 257 204 5 0 0 0 - - -;
+#X floatatom 257 227 5 0 0 0 - - -;
+#X msg 103 398 \$1 50;
+#X text 23 30 Start;
+#X text 74 28 load;
+#X text 297 180 nbr d'échantillons;
+#X text 298 205 nbr d'échantillons choisi;
+#X text 298 229 nbr d'échantillons total;
+#X msg 27 147 stop;
+#X obj 27 91 sel 0 1;
+#X text 106 286 entre 0 et la valeur en échantillons;
+#X msg 66 286 0 \$1;
+#X obj 62 117 t b b;
+#X obj 92 227 + 1;
+#X obj 66 261 int;
+#X text 96 262 donne 0 en entrer en premier et la valuer du slider
+après;
+#X text 240 478 nbr échantillons;
+#X text 240 504 volume;
+#X obj 404 601 tabread4~;
+#X connect 1 0 2 0;
+#X connect 2 0 15 0;
+#X connect 2 0 13 1;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 5 0 8 0;
+#X connect 5 1 28 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 9 0 7 1;
+#X connect 9 0 8 1;
+#X connect 10 0 25 0;
+#X connect 11 0 28 0;
+#X connect 12 0 18 0;
+#X connect 13 0 17 0;
+#X connect 13 0 29 0;
+#X connect 14 0 16 0;
+#X connect 14 0 13 0;
+#X connect 18 0 9 0;
+#X connect 24 0 5 0;
+#X connect 25 0 24 0;
+#X connect 25 1 28 0;
+#X connect 27 0 5 0;
+#X connect 28 0 30 0;
+#X connect 28 1 14 0;
+#X connect 29 0 30 1;
+#X connect 30 0 27 0;
