@@ -1,13 +1,13 @@
-#N canvas -8 -8 1920 1007 12;
+#N canvas 873 56 863 815 12;
 #X obj 89 647 dac~;
 #X obj 83 621 *~;
 #X obj 115 621 *~;
 #X obj 157 714 line~;
 #X obj 160 669 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--4032 -4032 12700 1;
+-4032 -4032 8400 1;
 #X msg 157 692 \$1 50;
-#X obj 54 6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
+#X obj 56 -10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X obj 54 288 sel 0 1 2 3 4 5 6 7;
 #X obj 62 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -26,7 +26,7 @@
 #X obj 167 313 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 62 333 tabplay~ kick;
-#X obj 378 373 tabplay~ hh;
+#X obj 383 338 tabplay~ hh;
 #X obj 20 237 vsl 15 128 20 1100 1 0 empty empty cutoff 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 61 362 hip~;
@@ -72,8 +72,8 @@
 #X connect 4 0 1 0;
 #X connect 5 0 4 0;
 #X connect 6 0 3 0;
-#X restore 157 11 pd 2minStop;
-#X obj 238 350 tabplay~ shk;
+#X restore 153 11 pd 2minStop;
+#X obj 248 315 tabplay~ shk;
 #X obj 196 288 sel 0 1 2 3 4 5 6 7;
 #X obj 125 70 counter 7;
 #X floatatom 125 94 5 0 0 0 - - -;
@@ -82,7 +82,7 @@
 #X obj 16 77 metroReset;
 #X obj 59 50 s stop;
 #X obj 346 310 sel 0 1 2 3 4 5 6 7;
-#X obj 239 374 *~ 0.1;
+#X obj 249 339 *~ 0.1;
 #N canvas 0 50 1334 785 arraySnd 0;
 #X obj 33 96 soundfiler;
 #X floatatom 33 120 5 0 0 0 - - -;
@@ -217,8 +217,8 @@
 #X obj 424 512 *~ 0.05;
 #X obj 346 287 selMetro 4 8;
 #X obj 196 265 selMetro 12 8;
-#X obj 109 364 s~ kick;
-#X obj 579 25 bass~;
+#X obj 58 101 bass~;
+#X obj 109 364 s~ kicks;
 #X connect 1 0 0 0;
 #X connect 2 0 0 1;
 #X connect 3 0 1 1;
@@ -240,7 +240,7 @@
 #X connect 8 0 16 0;
 #X connect 12 0 16 0;
 #X connect 16 0 19 0;
-#X connect 16 0 48 0;
+#X connect 16 0 49 0;
 #X connect 17 0 1 0;
 #X connect 17 0 2 0;
 #X connect 17 0 27 0;
@@ -257,7 +257,6 @@
 #X connect 26 0 43 0;
 #X connect 27 0 45 0;
 #X connect 27 1 44 0;
-#X connect 28 0 6 0;
 #X connect 29 0 38 0;
 #X connect 30 3 29 0;
 #X connect 30 4 29 0;
@@ -269,7 +268,7 @@
 #X connect 34 0 46 0;
 #X connect 34 0 47 0;
 #X connect 35 0 7 0;
-#X connect 35 1 49 0;
+#X connect 35 0 48 0;
 #X connect 37 1 17 0;
 #X connect 37 2 17 0;
 #X connect 37 3 17 0;
