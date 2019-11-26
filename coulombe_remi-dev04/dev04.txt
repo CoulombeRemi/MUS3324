@@ -1,0 +1,15 @@
+-Une lecture de son chargé dans un array (lecture en RAM). OK
+-Un instrument de synthèse (synthèse soustractive, additive ou par modulation).
+-Deux effets de filtrage. 1/2
+-Des algorithmes de contrôle pour générer l'évolution de la miniature (ex.: vitesse de lecture du son, fréquence et timbre de la synthèse, variations appliquées sur les filtres, ...).
+-La musique doit démarrée sur l'activation d'un toggle et arrêter automatiquement (avec fadein et fadeout pour éviter les clics).
+-Toute matière vue en classe jusqu'à maintenant peut être utilisée dans ce projet.
+-Le tout doit être stéréo.
+-Propreté et élégance. Faites le ménage de votre programme avant la remise.
+
+
+
+bass:
+square wave --> 2/3 volume
+sawthoot wave --> 1/3 volume
+saw-triangle wave --> 100% volume
