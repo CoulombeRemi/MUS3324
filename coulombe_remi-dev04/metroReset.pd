@@ -1,4 +1,4 @@
-#N canvas 1121 295 450 300 12;
+#N canvas 506 275 450 294 12;
 #X obj 40 132 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 40 200 % 8;

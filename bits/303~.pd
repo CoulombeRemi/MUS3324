@@ -1,4 +1,4 @@
-#N canvas 0 50 450 300 12;
+#N canvas 0 50 450 537 12;
 #X obj 56 110 t f b b, f 26;
 #X obj 56 134 mtof;
 #X obj 56 177 phasor~;
@@ -21,6 +21,8 @@
 #X obj 371 48 loadbang;
 #X obj 21 43 inlet frq;
 #X obj 95 43 inlet filterOpen;
+#X text 9 316 https://www.youtube.com/watch?v=_qImZOcHz2U&ab_channel=ReallyUsefulPlugins
+;
 #X connect 0 0 1 0;
 #X connect 0 1 4 0;
 #X connect 0 2 5 0;
