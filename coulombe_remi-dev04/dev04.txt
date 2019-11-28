@@ -9,13 +9,15 @@
 
 
 
-bass:  OK
+bass:
 square wave --> 2/3 volume
 sawthoot wave --> 1/3 volume
 saw-triangle wave --> 100% volume
+Voir pour mettre la basse en contre temps du kick [sel 0 1 2 3] et mettre les notes sur 1-2-3
 
-303: OK
+303:
 drunk sur le filtre
+Voir pour une autre melodie apres l'ouverture du filter au debut
 
 
 on start : 
@@ -24,3 +26,6 @@ voir pour activer le dsp au debut
 synth:
 ajouter des accords cours? (permet d'avoir le synth avec modulation)
 ajouter une ligne de synth avec bcp de verb (juste une longue note)?
+
+Noise:
+ajouter fade in/out sur noise pour faire des transitions.
