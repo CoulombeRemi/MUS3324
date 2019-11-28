@@ -23,3 +23,4 @@ voir pour activer le dsp au debut
 
 synth:
 ajouter des accords cours? (permet d'avoir le synth avec modulation)
+ajouter une ligne de synth avec bcp de verb (juste une longue note)?
