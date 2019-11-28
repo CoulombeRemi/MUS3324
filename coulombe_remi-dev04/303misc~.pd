@@ -1,4 +1,4 @@
-#N canvas 650 287 450 300 12;
+#N canvas 650 287 646 454 12;
 #X obj 148 46 sel 0 1 2 3 4 5 6 7;
 #X msg 213 80 45;
 #X msg 248 80 36;
@@ -72,6 +72,8 @@
 #X obj 148 0 inlet count;
 #X obj 202 252 outlet~ L;
 #X obj 283 252 outlet~ R;
+#X text 78 307 Son de type 303 jouant 3 notes.;
+#X text 78 324 Ajout de reverb avec freeverb~;
 #X connect 0 2 4 0;
 #X connect 0 4 1 0;
 #X connect 0 5 2 0;

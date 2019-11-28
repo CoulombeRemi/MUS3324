@@ -4,7 +4,7 @@
 #X obj 40 200 % 8;
 #X obj 40 151 metro 117;
 #X obj 40 176 counter;
-#X obj 40 54 inlet;
+#X obj 40 108 inlet;
 #X obj 40 224 outlet;
 #X obj 157 149 sel 0;
 #X obj 112 229 outlet metro;
