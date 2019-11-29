@@ -1,4 +1,4 @@
-#N canvas 173 0 1193 966 12;
+#N canvas 577 43 1193 867 12;
 #X obj 120 124 tgl 30 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #X text 250 262 mesure;
