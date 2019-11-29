@@ -48,15 +48,14 @@
 #X text 746 267 voir pour changer les vline~ par des line;
 #X msg 515 297 1 1000;
 #X obj 515 324 line 0 10;
-#X msg 628 283 0 1000;
-#X obj 628 258 r reset;
-#X text 751 300 voir pour enlever le [s stop];
+#X msg 570 297 0 1000;
 #X connect 0 0 2 0;
 #X connect 0 0 25 0;
-#X connect 0 0 39 0;
 #X connect 2 0 3 2;
 #X connect 2 0 4 2;
 #X connect 2 0 32 0;
+#X connect 2 0 41 0;
+#X connect 2 1 39 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 24 0;
@@ -97,4 +96,3 @@
 #X connect 39 0 40 0;
 #X connect 40 0 19 0;
 #X connect 41 0 40 0;
-#X connect 42 0 41 0;
