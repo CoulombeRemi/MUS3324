@@ -17,9 +17,9 @@
 #X obj 123 80 metro 117;
 #X obj 242 173 loadbang;
 #X msg 242 197 1;
-#X obj 730 556 line~ 50;
+#X obj 616 445 line~ 50;
 #X obj 251 417 *~;
-#X obj 123 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 123 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array sqr 1027 float 2;
@@ -60,23 +60,23 @@
 #X text 107 517 Son iteratif avec onde carre et en DdS;
 #X text 107 536 Modulation avec Sinus accelerant;
 #X text 391 66 speed up;
-#X obj 669 445 vline~;
-#X obj 730 467 snapshot~;
-#X floatatom 730 514 5 0 0 0 - - -;
-#X obj 730 425 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 555 334 vline~;
+#X obj 616 356 snapshot~;
+#X floatatom 616 403 5 0 0 0 - - -;
+#X obj 616 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X msg 669 423 0;
-#X obj 730 442 metro 10;
-#X obj 730 404 loadbang;
-#X obj 629 358 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 555 312 0;
+#X obj 616 331 metro 10;
+#X obj 616 293 loadbang;
+#X obj 515 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 677 357 volume up&down;
+#X text 563 246 volume up&down;
 #X obj 123 37 sel 51;
-#X obj 669 401 r reset;
-#X msg 630 377 0.2 8360 \, 0.12 2000 12000;
-#X obj 730 491 + 0.05;
-#X obj 733 538 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 635 1;
+#X obj 555 290 r reset;
+#X msg 516 266 0.2 8360 \, 0.12 2000 12000;
+#X obj 616 380 + 0.05;
+#X obj 619 427 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2159 1;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 25 0;

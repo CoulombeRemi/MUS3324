@@ -1,4 +1,4 @@
-#N canvas 83 99 1147 785 12;
+#N canvas 542 93 1147 785 12;
 #N canvas 1179 130 653 406 (subpatch) 0;
 #X obj 67 132 t f b b, f 26;
 #X obj 67 156 mtof;
@@ -76,51 +76,52 @@
 \, 7 26 \, 8 14 \, 9 36 \, 10 36 \, 11 36 \, 12 36 \, 13 45 \, 14 -150
 \, 15 -150;
 #X obj 161 116 sel 17;
-#X obj 414 525 hsl 128 15 0 72 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 706 1;
-#X obj 431 470 loadbang;
-#X msg 431 495 2;
-#X obj 411 447 + 4;
-#X obj 642 446 vline~;
-#X obj 706 467 snapshot~;
-#X floatatom 706 516 5 0 0 0 - - -;
-#X obj 706 425 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 442 490 hsl 128 15 0 72 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 353 1;
+#X obj 459 435 loadbang;
+#X msg 459 460 2;
+#X obj 439 412 + 4;
+#X obj 670 384 vline~;
+#X obj 734 405 snapshot~;
+#X floatatom 734 454 5 0 0 0 - - -;
+#X obj 734 363 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X msg 642 423 0;
-#X obj 706 442 metro 10;
-#X obj 706 404 loadbang;
-#X obj 642 358 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 670 361 0;
+#X obj 734 380 metro 10;
+#X obj 734 342 loadbang;
+#X obj 670 296 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 411 337 sel 23;
-#X obj 411 400 metro 117;
-#X obj 411 359 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 439 302 sel 23;
+#X obj 439 365 metro 117;
+#X obj 439 324 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 642 336 sel 17;
-#X obj 706 491 + 2;
-#X msg 642 376 2 5616;
-#X obj 440 373 t b;
-#X obj 491 400 metro 500;
-#X obj 491 445 + 30;
-#X obj 491 423 drunk 38 6;
-#X obj 411 546 expr if($f1 > 34 \, 1 \, 0) \;;
-#X obj 411 570 sel 1;
-#X obj 411 594 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 670 274 sel 17;
+#X obj 734 429 + 2;
+#X msg 670 314 2 5616;
+#X obj 468 338 t b;
+#X obj 519 365 metro 500;
+#X obj 519 410 + 30;
+#X obj 519 388 drunk 38 6;
+#X obj 439 511 expr if($f1 > 34 \, 1 \, 0) \;;
+#X obj 439 535 sel 1;
+#X obj 439 559 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 411 423 drunk 26 6;
-#X text 688 336 filter rise init;
-#X text 460 338 filter drunk;
+#X obj 439 388 drunk 26 6;
+#X text 716 274 filter rise init;
+#X text 488 303 filter drunk;
 #X obj 214 117 r stop;
-#X obj 412 316 r stop;
+#X obj 440 281 r stop;
 #X obj 214 373 r v303;
 #X obj 302 66 inlet count;
 #X obj 51 414 outlet~ L;
 #X obj 122 414 outlet~ R;
-#X obj 267 420 s v303init;
-#X msg 267 398 0.4;
-#X obj 267 375 loadbang;
+#X obj 51 483 s v303init;
+#X msg 51 461 0.4;
+#X obj 51 438 loadbang;
 #X text 114 655 Son de type 303 jouant melodie.;
 #X text 115 673 Fitlre passant de 2 a 4 en 5.6s \, puis il devient
 aleatoire avec le drunk;
+#X text 132 486 <-- intialisation du volume dans le mix;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 50 0;
