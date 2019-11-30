@@ -1,4 +1,4 @@
-#N canvas 267 172 917 636 12;
+#N canvas 546 99 917 636 12;
 #X obj 153 297 phasor~;
 #X obj 140 339 expr~ $v1 > $v2;
 #X obj 242 247 osc~;
@@ -19,7 +19,7 @@
 #X msg 242 197 1;
 #X obj 616 445 line~ 50;
 #X obj 251 417 *~;
-#X obj 123 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 123 60 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array sqr 1027 float 2;
@@ -39,18 +39,6 @@
 #X msg 381 353 10;
 #X text 410 331 frq;
 #X text 412 354 Q;
-#X obj 350 111 vline~;
-#X obj 415 149 snapshot~;
-#X floatatom 415 196 5 0 0 0 - - -;
-#X obj 415 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X msg 350 90 0;
-#X obj 415 124 metro 10;
-#X obj 415 86 loadbang;
-#X obj 341 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 415 173 + 1;
-#X msg 341 67 9 9360;
 #X obj 123 103 counter 23;
 #X obj 515 165 loadbang;
 #X obj 123 13 inlet bang;
@@ -59,7 +47,6 @@
 #X obj 251 443 outlet~;
 #X text 107 517 Son iteratif avec onde carre et en DdS;
 #X text 107 536 Modulation avec Sinus accelerant;
-#X text 391 66 speed up;
 #X obj 555 334 vline~;
 #X obj 616 356 snapshot~;
 #X floatatom 616 403 5 0 0 0 - - -;
@@ -71,12 +58,16 @@
 #X obj 515 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 563 246 volume up&down;
-#X obj 123 37 sel 51;
 #X obj 555 290 r reset;
 #X msg 516 266 0.2 8360 \, 0.12 2000 12000;
 #X obj 616 380 + 0.05;
 #X obj 619 427 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2159 1;
+-1 -1 635 1;
+#X obj 389 150 line 1 10;
+#X msg 383 85 1, f 2;
+#X msg 390 106 20 9360;
+#X msg 393 127 1 9360;
+#X obj 123 38 sel 51 61;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 25 0;
@@ -96,11 +87,11 @@
 #X connect 14 0 13 0;
 #X connect 14 0 30 0;
 #X connect 14 0 32 0;
-#X connect 15 0 45 0;
+#X connect 15 0 35 0;
 #X connect 16 0 17 0;
 #X connect 17 0 3 0;
 #X connect 18 0 19 1;
-#X connect 19 0 50 0;
+#X connect 19 0 40 0;
 #X connect 20 0 15 0;
 #X connect 22 0 26 0;
 #X connect 23 0 12 0;
@@ -113,33 +104,28 @@
 #X connect 30 0 31 1;
 #X connect 31 0 19 0;
 #X connect 32 0 31 2;
-#X connect 35 0 36 0;
-#X connect 36 0 43 0;
-#X connect 37 0 3 0;
-#X connect 38 0 40 0;
-#X connect 39 0 35 0;
-#X connect 40 0 36 0;
-#X connect 41 0 38 0;
-#X connect 42 0 44 0;
-#X connect 43 0 37 0;
-#X connect 44 0 35 0;
-#X connect 45 0 28 0;
-#X connect 46 0 22 0;
-#X connect 47 0 63 0;
-#X connect 48 0 20 0;
-#X connect 48 0 39 0;
-#X connect 54 0 55 0;
-#X connect 55 0 66 0;
-#X connect 56 0 67 0;
-#X connect 57 0 59 0;
-#X connect 58 0 54 0;
-#X connect 59 0 55 0;
-#X connect 60 0 57 0;
-#X connect 61 0 65 0;
-#X connect 63 0 42 0;
-#X connect 63 0 20 0;
-#X connect 63 0 61 0;
-#X connect 64 0 58 0;
-#X connect 65 0 54 0;
-#X connect 66 0 56 0;
-#X connect 67 0 18 0;
+#X connect 35 0 28 0;
+#X connect 36 0 22 0;
+#X connect 37 0 60 0;
+#X connect 38 0 20 0;
+#X connect 38 0 57 0;
+#X connect 43 0 44 0;
+#X connect 44 0 54 0;
+#X connect 45 0 55 0;
+#X connect 46 0 48 0;
+#X connect 47 0 43 0;
+#X connect 48 0 44 0;
+#X connect 49 0 46 0;
+#X connect 50 0 53 0;
+#X connect 52 0 47 0;
+#X connect 53 0 43 0;
+#X connect 54 0 45 0;
+#X connect 55 0 18 0;
+#X connect 56 0 3 0;
+#X connect 57 0 56 0;
+#X connect 58 0 56 0;
+#X connect 59 0 56 0;
+#X connect 60 0 20 0;
+#X connect 60 0 50 0;
+#X connect 60 0 58 0;
+#X connect 60 1 59 0;
