@@ -1,4 +1,4 @@
-#N canvas 428 57 1337 785 12;
+#N canvas 383 89 1337 785 12;
 #N canvas 836 235 653 406 (subpatch) 0;
 #X obj 67 132 t f b b, f 26;
 #X obj 67 156 mtof;
@@ -61,7 +61,7 @@
 #C restore;
 #X floatatom 161 301 5 0 0 0 - - -;
 #X obj 161 231 metro 117;
-#X obj 161 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 161 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 579 9 loadbang;
 #X msg 579 31 0 36 \, 1 19 \, 2 36 \, 3 26 \, 4 36 \, 5 36 \, 6 26
@@ -130,8 +130,7 @@ aleatoire avec le drunk;
 #X msg 581 155 0 36 \, 1 -150 \, 2 48 \, 3 -150 \, 4 36 \, 5 36 \,
 6 -150 \, 7 26 \, 8 -150 \, 9 48 \, 10 -150 \, 11 36 \, 12 36 \, 13
 -150 \, 14 -150 \, 15 -150;
-#X obj 388 26 sel 51 61 74 84;
-#X msg 582 196 0 -150;
+#X obj 388 26 sel 51 61 74;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 43 0;
@@ -196,5 +195,3 @@ aleatoire avec le drunk;
 #X connect 64 0 51 0;
 #X connect 64 1 55 0;
 #X connect 64 2 63 0;
-#X connect 64 3 65 0;
-#X connect 65 0 7 0;
