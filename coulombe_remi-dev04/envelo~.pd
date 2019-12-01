@@ -6,7 +6,7 @@
 #X obj 142 100 pack 0 500;
 #X obj 68 44 inlet bng;
 #X obj 235 45 inlet decay;
-#X floatatom 235 71 5 0 0 1 decay_time - -;
+#X floatatom 235 71 5 0 0 1 temps_decay - -;
 #X obj 101 151 line~;
 #X obj 101 177 *~;
 #X obj 103 204 *~;

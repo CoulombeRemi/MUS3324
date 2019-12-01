@@ -1,4 +1,4 @@
-#N canvas -6 55 1066 785 12;
+#N canvas 483 77 1066 785 12;
 #N canvas 836 235 653 406 (subpatch) 0;
 #X obj 67 132 t f b b, f 26;
 #X obj 67 156 mtof;
@@ -122,7 +122,7 @@ aleatoire avec le drunk;
 \, 15 -150;
 #X text 1016 38 main;
 #X text 1013 73 break;
-#X text 1017 111 end;
+#X text 1018 160 end;
 #X obj 335 129 r reset;
 #X msg 665 308 3 5616;
 #X obj 729 427 + 1;
