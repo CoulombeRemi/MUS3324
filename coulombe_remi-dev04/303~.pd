@@ -1,4 +1,4 @@
-#N canvas 386 77 1337 785 12;
+#N canvas 428 57 1337 785 12;
 #N canvas 836 235 653 406 (subpatch) 0;
 #X obj 67 132 t f b b, f 26;
 #X obj 67 156 mtof;
@@ -63,8 +63,8 @@
 #X obj 161 231 metro 117;
 #X obj 161 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 501 45 loadbang;
-#X msg 501 67 0 36 \, 1 19 \, 2 36 \, 3 26 \, 4 36 \, 5 36 \, 6 26
+#X obj 579 9 loadbang;
+#X msg 579 31 0 36 \, 1 19 \, 2 36 \, 3 26 \, 4 36 \, 5 36 \, 6 26
 \, 7 26 \, 8 26 \, 9 36 \, 10 36 \, 11 36 \, 12 36 \, 13 45 \, 14 -150
 \, 15 -150;
 #X obj 161 324 + 12;
@@ -111,26 +111,27 @@
 #X text 115 673 Fitlre passant de 2 a 4 en 5.6s \, puis il devient
 aleatoire avec le drunk;
 #X text 132 486 <-- intialisation du volume dans le mix;
-#X msg 502 108 0 48 \, 1 19 \, 2 48 \, 3 14 \, 4 48 \, 5 36 \, 6 24
+#X msg 580 72 0 48 \, 1 19 \, 2 48 \, 3 14 \, 4 48 \, 5 36 \, 6 24
 \, 7 26 \, 8 14 \, 9 36 \, 10 36 \, 11 24 \, 12 24 \, 13 45 \, 14 -150
 \, 15 -150;
-#X obj 388 26 sel 51 61;
-#X text 625 46 -150 = 0...Hz;
+#X text 703 10 -150 = 0...Hz;
 #X obj 670 331 r reset;
-#X obj 563 45 r reset;
-#X msg 502 148 0 36 \, 1 19 \, 2 48 \, 3 26 \, 4 36 \, 5 36 \, 6 26
+#X obj 641 9 r reset;
+#X msg 580 112 0 36 \, 1 19 \, 2 48 \, 3 26 \, 4 36 \, 5 36 \, 6 26
 \, 7 26 \, 8 26 \, 9 48 \, 10 36 \, 11 36 \, 12 36 \, 13 45 \, 14 -150
 \, 15 -150;
-#X text 938 74 main;
-#X text 935 109 break;
-#X text 939 147 end;
+#X text 1016 38 main;
+#X text 1013 73 break;
+#X text 1017 111 end;
 #X obj 214 190 r reset;
 #X obj 439 280 r reset;
 #X msg 670 307 3 5616;
 #X obj 734 426 + 1;
-#X msg 503 191 0 36 \, 1 -150 \, 2 48 \, 3 -150 \, 4 36 \, 5 36 \,
+#X msg 581 155 0 36 \, 1 -150 \, 2 48 \, 3 -150 \, 4 36 \, 5 36 \,
 6 -150 \, 7 26 \, 8 -150 \, 9 48 \, 10 -150 \, 11 36 \, 12 36 \, 13
 -150 \, 14 -150 \, 15 -150;
+#X obj 388 26 sel 51 61 74 84;
+#X msg 582 196 0 -150;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 43 0;
@@ -154,14 +155,14 @@ aleatoire avec le drunk;
 #X connect 17 0 15 0;
 #X connect 18 0 15 0;
 #X connect 19 0 20 0;
-#X connect 20 0 63 0;
+#X connect 20 0 62 0;
 #X connect 21 0 15 0;
 #X connect 22 0 24 0;
 #X connect 23 0 19 0;
 #X connect 24 0 20 0;
 #X connect 25 0 22 0;
 #X connect 25 0 23 0;
-#X connect 26 0 62 0;
+#X connect 26 0 61 0;
 #X connect 27 0 29 0;
 #X connect 28 0 38 0;
 #X connect 29 0 31 0;
@@ -178,19 +179,22 @@ aleatoire avec le drunk;
 #X connect 41 0 4 0;
 #X connect 42 0 14 0;
 #X connect 42 0 27 0;
-#X connect 42 0 52 0;
 #X connect 42 0 30 0;
+#X connect 42 0 64 0;
 #X connect 46 0 45 0;
 #X connect 47 0 46 0;
 #X connect 51 0 7 0;
-#X connect 52 0 51 0;
-#X connect 52 1 56 0;
-#X connect 54 0 23 0;
-#X connect 55 0 12 0;
-#X connect 56 0 7 0;
-#X connect 60 0 10 0;
-#X connect 60 0 6 2;
-#X connect 61 0 29 0;
-#X connect 62 0 19 0;
-#X connect 63 0 21 0;
-#X connect 64 0 7 0;
+#X connect 53 0 23 0;
+#X connect 54 0 12 0;
+#X connect 55 0 7 0;
+#X connect 59 0 10 0;
+#X connect 59 0 6 2;
+#X connect 60 0 29 0;
+#X connect 61 0 19 0;
+#X connect 62 0 21 0;
+#X connect 63 0 7 0;
+#X connect 64 0 51 0;
+#X connect 64 1 55 0;
+#X connect 64 2 63 0;
+#X connect 64 3 65 0;
+#X connect 65 0 7 0;
