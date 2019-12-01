@@ -1,4 +1,4 @@
-#N canvas 383 89 1337 785 12;
+#N canvas -6 55 1066 785 12;
 #N canvas 836 235 653 406 (subpatch) 0;
 #X obj 67 132 t f b b, f 26;
 #X obj 67 156 mtof;
@@ -61,7 +61,7 @@
 #C restore;
 #X floatatom 161 301 5 0 0 0 - - -;
 #X obj 161 231 metro 117;
-#X obj 161 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 161 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 579 9 loadbang;
 #X msg 579 31 0 36 \, 1 19 \, 2 36 \, 3 26 \, 4 36 \, 5 36 \, 6 26
@@ -69,36 +69,36 @@
 \, 15 -150;
 #X obj 161 324 + 12;
 #X obj 161 189 sel 17;
-#X obj 442 490 hsl 128 15 0 72 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 442 500 hsl 128 15 0 72 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 176 1;
-#X obj 459 435 loadbang;
-#X msg 459 460 2;
-#X obj 439 412 + 4;
-#X obj 670 383 vline~;
-#X obj 734 402 snapshot~;
-#X floatatom 734 451 5 0 0 0 - - -;
-#X obj 734 360 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 459 445 loadbang;
+#X msg 459 470 2;
+#X obj 439 422 + 4;
+#X obj 665 384 vline~;
+#X obj 729 403 snapshot~;
+#X floatatom 729 452 5 0 0 0 - - -;
+#X obj 729 361 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X msg 670 360 0;
-#X obj 734 377 metro 10;
-#X obj 734 339 loadbang;
-#X obj 670 289 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 665 361 0;
+#X obj 729 378 metro 10;
+#X obj 729 340 loadbang;
+#X obj 665 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 439 301 sel 23;
-#X obj 439 365 metro 117;
+#X obj 439 375 metro 117;
 #X obj 439 324 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 670 267 sel 17;
-#X obj 468 338 t b;
-#X obj 519 365 metro 500;
-#X obj 519 410 + 30;
-#X obj 519 388 drunk 38 6;
-#X obj 439 511 expr if($f1 > 34 \, 1 \, 0) \;;
-#X obj 439 535 sel 1;
-#X obj 439 559 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 665 268 sel 17;
+#X obj 468 348 t b;
+#X obj 519 375 metro 500;
+#X obj 519 420 + 30;
+#X obj 519 398 drunk 38 6;
+#X obj 439 521 expr if($f1 > 34 \, 1 \, 0) \;;
+#X obj 439 545 sel 1;
+#X obj 439 569 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 439 388 drunk 26 6;
-#X text 716 267 filter rise init;
+#X obj 439 398 drunk 26 6;
+#X text 711 268 filter rise init;
 #X text 488 303 filter drunk;
 #X obj 214 373 r v303;
 #X obj 161 108 inlet count;
@@ -115,7 +115,7 @@ aleatoire avec le drunk;
 \, 7 26 \, 8 14 \, 9 36 \, 10 36 \, 11 24 \, 12 24 \, 13 45 \, 14 -150
 \, 15 -150;
 #X text 703 10 -150 = 0...Hz;
-#X obj 670 331 r reset;
+#X obj 665 332 r reset;
 #X obj 641 9 r reset;
 #X msg 580 112 0 36 \, 1 19 \, 2 48 \, 3 26 \, 4 36 \, 5 36 \, 6 26
 \, 7 26 \, 8 26 \, 9 48 \, 10 36 \, 11 36 \, 12 36 \, 13 45 \, 14 -150
@@ -123,14 +123,15 @@ aleatoire avec le drunk;
 #X text 1016 38 main;
 #X text 1013 73 break;
 #X text 1017 111 end;
-#X obj 214 190 r reset;
-#X obj 439 280 r reset;
-#X msg 670 307 3 5616;
-#X obj 734 426 + 1;
+#X obj 335 129 r reset;
+#X msg 665 308 3 5616;
+#X obj 729 427 + 1;
 #X msg 581 155 0 36 \, 1 -150 \, 2 48 \, 3 -150 \, 4 36 \, 5 36 \,
 6 -150 \, 7 26 \, 8 -150 \, 9 48 \, 10 -150 \, 11 36 \, 12 36 \, 13
 -150 \, 14 -150 \, 15 -150;
 #X obj 388 26 sel 51 61 74;
+#X obj 85 207 midReset;
+#X obj 468 324 midReset;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 43 0;
@@ -144,6 +145,7 @@ aleatoire avec le drunk;
 #X connect 8 0 13 0;
 #X connect 9 0 6 0;
 #X connect 10 0 9 0;
+#X connect 10 0 64 0;
 #X connect 11 0 12 0;
 #X connect 12 0 7 0;
 #X connect 13 0 0 0;
@@ -154,19 +156,20 @@ aleatoire avec le drunk;
 #X connect 17 0 15 0;
 #X connect 18 0 15 0;
 #X connect 19 0 20 0;
-#X connect 20 0 62 0;
+#X connect 20 0 61 0;
 #X connect 21 0 15 0;
 #X connect 22 0 24 0;
 #X connect 23 0 19 0;
 #X connect 24 0 20 0;
 #X connect 25 0 22 0;
 #X connect 25 0 23 0;
-#X connect 26 0 61 0;
+#X connect 26 0 60 0;
 #X connect 27 0 29 0;
 #X connect 28 0 38 0;
 #X connect 29 0 31 0;
 #X connect 29 0 28 0;
 #X connect 29 0 32 0;
+#X connect 29 0 65 0;
 #X connect 30 0 26 0;
 #X connect 31 0 22 0;
 #X connect 32 0 34 0;
@@ -179,19 +182,19 @@ aleatoire avec le drunk;
 #X connect 42 0 14 0;
 #X connect 42 0 27 0;
 #X connect 42 0 30 0;
-#X connect 42 0 64 0;
+#X connect 42 0 63 0;
 #X connect 46 0 45 0;
 #X connect 47 0 46 0;
 #X connect 51 0 7 0;
 #X connect 53 0 23 0;
 #X connect 54 0 12 0;
 #X connect 55 0 7 0;
-#X connect 59 0 10 0;
 #X connect 59 0 6 2;
-#X connect 60 0 29 0;
-#X connect 61 0 19 0;
-#X connect 62 0 21 0;
-#X connect 63 0 7 0;
-#X connect 64 0 51 0;
-#X connect 64 1 55 0;
-#X connect 64 2 63 0;
+#X connect 60 0 19 0;
+#X connect 61 0 21 0;
+#X connect 62 0 7 0;
+#X connect 63 0 51 0;
+#X connect 63 1 55 0;
+#X connect 63 2 62 0;
+#X connect 64 0 10 0;
+#X connect 65 0 29 0;
