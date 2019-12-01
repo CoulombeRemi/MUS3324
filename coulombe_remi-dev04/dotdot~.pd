@@ -1,4 +1,4 @@
-#N canvas 549 167 1175 636 12;
+#N canvas 556 207 1175 636 12;
 #X obj 153 297 phasor~;
 #X obj 140 339 expr~ $v1 > $v2;
 #X obj 242 247 osc~;
@@ -42,7 +42,7 @@
 #X obj 123 103 counter 23;
 #X obj 401 629 loadbang;
 #X obj 123 4 inlet bang;
-#X obj 226 30 r reset, f 8;
+#X obj 351 76 r reset;
 #X text 237 153 modulation;
 #X obj 251 495 outlet~;
 #X text 111 575 Son iteratif avec onde carre et en DdS;
@@ -129,7 +129,6 @@
 #X connect 36 0 22 0;
 #X connect 37 0 64 0;
 #X connect 37 0 81 0;
-#X connect 38 0 20 0;
 #X connect 38 0 56 0;
 #X connect 43 0 44 0;
 #X connect 44 0 53 0;
