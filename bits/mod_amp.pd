@@ -1,0 +1,13 @@
+#N canvas 1277 264 450 317 12;
+#X obj 151 88 osc~ 6000;
+#X obj 222 146 osc~ 2500;
+#X text 147 68 frq. porteuse;
+#X text 219 127 frq. modulante;
+#X obj 222 170 *~ 0.5;
+#X obj 222 194 +~ 0.5;
+#X obj 205 220 *~;
+#X text 148 50 signal qui se fait moduler;
+#X connect 0 0 6 0;
+#X connect 1 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
