@@ -1,0 +1,23 @@
+#N canvas 288 122 523 457 10;
+#X text 4 6 Le délai multi-bande;
+#X text 4 26 Le projet consiste à créer un module de traitement appliquant
+différents délais à différentes bandes de fréquence sur un son
+jouant en boucle.;
+#X text 3 313 4) Pour mettre en place le délai multi-bande \, vous
+devez placer trois instances de cet objet pour chaque canal (gauche
+et droite).;
+#X text 3 368 5) On veut un contrôle de volume global!;
+#X text 4 75 1) Créer un array avec un mécanisme permettant à l'utilisateur
+d'y charger le son (mono) de son choix. Le son "transparent.wav" doit
+être chargé à l'ouverture de la patch \, et ce \, peut importe la
+machine sur laquelle le programme est exécuté.;
+#X text 4 153 2) Lire le son \, en boucle \, à sa hauteur originale.
+La vitesse de lecture doit s'adapter automatiquement si un autre son
+est chargé dans la mémoire.;
+#X text 4 212 3) Vous devez créer un objet qui appliquera \, en série
+\, sur le son lu en boucle: un filtrage passe-bande assez serré \,
+ensuite un délai simple (non-récursif) et enfin \, une modulation
+d'amplitude (PAS une modulation en anneaux). La fréquence centrale
+du filtre \, le Q du filtre \, le temps de délai ainsi que la fréquence
+de la modulation d'amplitude doivent être donnés en argument à la
+création de l'objet.;
